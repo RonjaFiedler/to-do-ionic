@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Todo</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="close()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label position="stacked">Description</ion-label>
+    <ion-input [(ngModel)]="todoText"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Priority</ion-label>
+    <ion-select [(ngModel)]="priority">
+      <ion-select-option value="1">1</ion-select-option>
+      <ion-select-option value="2">2</ion-select-option>
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
+      <ion-select-option value="5">5</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="block" (click)="addTodo()">
+    Save
+  </ion-button>
+
+</ion-content>

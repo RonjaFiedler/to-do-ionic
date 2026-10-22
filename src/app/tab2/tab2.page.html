@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Done</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let todo of todos"
+              [style.--background]="getColor(todo.priority)">
+
+      <ion-label>
+        <h2>{{ todo.todo }}</h2>
+        <p>Done</p>
+      </ion-label>
+
+      <ion-button (click)="toggle(todo)">
+        back to Todos
+      </ion-button>
+
+      <ion-button color="danger" (click)="delete(todo.id)">
+        Delete
+      </ion-button>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
