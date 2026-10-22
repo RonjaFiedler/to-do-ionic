@@ -1,9 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
 import { TodoService } from '../services/todo.service';
 import { Todo } from '../models/todo.models';
 import { TodoFormComponent } from '../models/todo-form.component';
-import { IonicModule } from '@ionic/angular';
+import {
+  ModalController,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonButton,
+  IonFooter
+} from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -11,7 +21,19 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   standalone: true, 
-  imports: [IonicModule,CommonModule,FormsModule]
+imports: [
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonButton,
+  IonFooter,
+  CommonModule,
+  FormsModule
+]
 })
 export class Tab1Page implements OnInit {
 
